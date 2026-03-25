@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyfair-dark: #0B1B3D;
+  --color-cyfair-red: #EF4444;
+  --color-cyfair-cyan: #22D3EE;
+  --color-cyfair-blue: #1E3A8A; /* Standard blue preference */
+}
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased selection:bg-cyfair-cyan/30;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-cyfair-dark/40 backdrop-blur-md border border-white/10 shadow-xl;
+  }
+  
+  .text-glow-cyan {
+    text-shadow: 0 0 10px rgba(34, 211, 238, 0.4);
+  }
+  
+  .gradient-border {
+    position: relative;
+    border-radius: theme('borderRadius.xl');
+    background: linear-gradient(to bottom right, theme('colors.cyfair-cyan'), theme('colors.cyfair-red'));
+    padding: 1px;
+  }
+}
