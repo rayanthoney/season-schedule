@@ -26,80 +26,92 @@ const App: React.FC = () => {
   });
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white selection:bg-cyfair-cyan/30">
-      {/* Hero Header */}
-      <div className="relative overflow-hidden bg-cyfair-dark/80 pt-16 pb-24 md:pt-24 md:pb-32">
-        <div className="absolute inset-0 z-0 opacity-20 Mix-blend-overlay">
-          <div className="absolute inset-0 bg-linear-to-b from-transparent to-slate-950" />
-          <div className="h-full w-full bg-[radial-gradient(circle_at_50%_50%,rgba(34,211,238,0.1),transparent_70%)]" />
+    <div className="min-h-screen bg-v3-surface text-slate-100 selection:bg-v3-red/30 selection:text-white">
+      {/* Hero Header: Asymmetrical Monolith */}
+      <div className="relative overflow-hidden pt-20 pb-24 md:pt-32 md:pb-40 border-b border-white/5">
+        <div className="absolute inset-0 z-0 opacity-20">
+          <div className="absolute inset-0 bg-linear-to-b from-v3-blue/20 to-v3-surface" />
+          <div className="h-full w-full bg-[radial-gradient(circle_at_20%_30%,rgba(189,195,247,0.1),transparent_70%)]" />
         </div>
 
-        <div className="max-w-6xl mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center gap-10">
-          <div className="relative group">
-            <div className="absolute -inset-4 bg-linear-to-r from-cyfair-cyan to-cyfair-red opacity-30 blur-2xl group-hover:opacity-50 transition-opacity" />
-            <img
-              src={logo}
-              alt="Cyfair Elite New Mexico Logo"
-              className="w-48 md:w-64 h-auto relative drop-shadow-2xl"
-            />
-          </div>
-
-          <div className="text-center md:text-left space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyfair-red/20 text-cyfair-red text-xs font-bold uppercase tracking-widest border border-cyfair-red/30">
-              <span className="w-2 h-2 rounded-full bg-cyfair-red animate-pulse" />
-              Girls Basketball
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-16 md:gap-24">
+            {/* Logo area with special lighting highlight */}
+            <div className="relative group shrink-0">
+              <div className="absolute -inset-8 logo-highlight opacity-30 group-hover:opacity-50 transition-opacity" />
+              <img
+                src={logo}
+                alt="Cy-Fair Elite NM Logo"
+                className="w-56 md:w-80 h-auto relative drop-shadow-[0_0_30px_rgba(0,0,0,0.5)]"
+              />
             </div>
-            <h1 className="text-5xl md:text-7xl font-black italic tracking-tighter text-white uppercase leading-none">
-              Season <span className="text-cyfair-cyan text-glow-cyan">Schedule</span>
-            </h1>
-            <p className="text-lg text-white/60 max-w-xl font-medium">
-              Catch the Cyfair Elite New Mexico girls in action as they compete across the southwest and beyond in the 2026 season.
-            </p>
-            <div className="flex justify-center md:justify-start pt-2">
-              <a
-                href="https://www.instagram.com/cyfairelitenewmexico?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group/ig flex items-center gap-3 px-6 py-3 rounded-2xl bg-white/5 border border-white/10 hover:border-cyfair-cyan/30 hover:bg-white/10 transition-all shadow-xl"
-              >
-                <div className="p-2 rounded-lg bg-linear-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] group-hover/ig:scale-110 transition-transform shadow-lg shadow-cyfair-red/10">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-5 h-5 text-white"
-                  >
-                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                  </svg>
+
+            <div className="text-center md:text-left pt-4 space-y-8 flex-1">
+              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-sm bg-v3-surface-low border-l-2 border-v3-red shadow-2xl">
+                <span className="w-2 h-2 rounded-full bg-v3-red animate-pulse" />
+                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-v3-red">Elite Athletic Ops</span>
+              </div>
+
+              <div className="space-y-4">
+                <h1 className="text-6xl md:text-9xl font-black italic tracking-tighter text-white uppercase leading-[0.85] font-display">
+                  SEASON <br />
+                  <span className="text-v3-cyan text-glow-cyan">SCHEDULE</span>
+                </h1>
+                <p className="text-lg md:text-xl text-slate-400 max-w-xl font-medium leading-relaxed font-body">
+                  High-velocity telemetry for the 2026 pursuit. Precision, performance, and the path to the championship.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap justify-center md:justify-start gap-6 pt-4">
+                <a
+                  href="https://www.instagram.com/cyfairelitenewmexico"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group/ig flex items-center gap-4 px-8 py-4 rounded-sm bg-v3-surface-high hover:bg-v3-surface-highest transition-all shadow-2xl border border-white/5"
+                >
+                  <div className="p-2.5 rounded-sm bg-linear-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] group-hover/ig:scale-110 transition-transform shadow-lg shadow-black/50">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-5 h-5 text-white">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                    </svg>
+                  </div>
+                  <div className="text-left font-display">
+                    <p className="text-[9px] font-bold uppercase tracking-widest text-white/30 leading-none mb-1">Telemetry Feed</p>
+                    <p className="text-base font-bold uppercase text-white group-hover/ig:text-v3-cyan transition-colors leading-none tracking-wider">@cyfairelitenm</p>
+                  </div>
+                </a>
+
+                {/* Vertical Stat Pulse (v3 Signature) */}
+                <div className="hidden lg:flex items-center gap-10 px-10 border-l border-white/10 opacity-30">
+                  <div>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-1">Active Sector</p>
+                    <p className="text-sm font-bold uppercase text-white">Southwest</p>
+                  </div>
+                  <div>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-1">Season Year</p>
+                    <p className="text-sm font-bold uppercase text-white">2026</p>
+                  </div>
                 </div>
-                <div className="text-left">
-                  <p className="text-[10px] font-black uppercase tracking-widest text-white/30 leading-none mb-1">Follow On</p>
-                  <p className="text-sm font-black uppercase text-white group-hover/ig:text-cyfair-cyan transition-colors leading-none tracking-wider">Instagram</p>
-                </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-4 -mt-12 mb-20 relative z-20">
-        {/* Toolbar */}
-        <div className="glass-card mb-8 p-4 rounded-3xl flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-2xl">
-          <div className="flex items-center gap-3">
-            <div className="flex p-1 bg-white/5 rounded-2xl border border-white/5">
+      {/* Main Content: Tonal Partitioning */}
+      <main className="max-w-7xl mx-auto px-6 py-20 relative z-20">
+        {/* Toolbar: Carved Inset Style */}
+        <div className="bg-v3-surface-lowest p-5 rounded-sm flex flex-col lg:flex-row lg:items-center justify-between gap-10 shadow-inner border border-white/5 mb-20">
+          <div className="flex items-center gap-2">
+            <div className="flex p-1 bg-v3-surface-low rounded-sm">
               {(['all', 'upcoming', 'past'] as const).map((filter) => (
                 <button
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
-                  className={`px-5 py-2 rounded-xl text-sm font-bold uppercase tracking-wide transition-all ${activeFilter === filter
-                    ? 'bg-cyfair-cyan text-cyfair-dark shadow-lg shadow-cyfair-cyan/20 -translate-y-px'
-                    : 'text-white/60 hover:text-white hover:bg-white/5'
+                  className={`px-8 py-3 rounded-sm text-xs font-bold uppercase tracking-[0.2em] transition-all relative font-display ${activeFilter === filter
+                    ? 'bg-v3-blue text-v3-cyan shadow-[0_0_20px_rgba(34,211,238,0.2)]'
+                    : 'text-white/40 hover:text-white hover:bg-white/5'
                     }`}
                 >
                   {filter}
@@ -108,20 +120,21 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          <div className="relative group min-w-[300px]">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30 group-focus-within:text-cyfair-cyan transition-colors" />
+          <div className="relative group flex-1 max-w-2xl">
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-v3-red/50 group-focus-within:bg-v3-red transition-all" />
+            <Search className="absolute left-6 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20 group-focus-within:text-v3-cyan transition-colors" />
             <input
               type="text"
-              placeholder="Search tournaments or cities..."
-              className="w-full bg-white/5 border border-white/10 rounded-2xl py-3 pl-12 pr-4 text-sm font-medium focus:outline-none focus:ring-1 focus:ring-cyfair-cyan focus:border-cyfair-cyan focus:bg-white/10 transition-all placeholder:text-white/20"
+              placeholder="LOCATE TOURNAMENT SECTOR..."
+              className="w-full bg-v3-surface-low rounded-sm py-5 pl-16 pr-6 text-xs font-bold uppercase tracking-[0.3em] focus:outline-none focus:bg-v3-surface-high transition-all placeholder:text-white/10"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
         </div>
 
-        {/* Schedule Grid */}
-        <div className="space-y-4">
+        {/* Schedule Grid: Air-Gap Separation */}
+        <div className="grid grid-cols-1 gap-4">
           {filteredTournaments.length > 0 ? (
             filteredTournaments.map((tournament) => (
               <ScheduleCard
@@ -131,48 +144,51 @@ const App: React.FC = () => {
               />
             ))
           ) : (
-            <div className="text-center py-20 bg-white/5 rounded-3xl border border-dashed border-white/10">
-              <Calendar className="w-12 h-12 text-white/10 mx-auto mb-4" />
-              <p className="text-white/40 font-medium italic">No tournaments found matching your search.</p>
+            <div className="text-center py-32 bg-v3-surface-low rounded-sm border border-dashed border-white/5">
+              <Calendar className="w-16 h-16 text-white/5 mx-auto mb-8" />
+              <p className="text-white/20 font-bold uppercase tracking-[0.3em] text-sm italic">No data received from Sector {activeFilter.toUpperCase()}</p>
             </div>
           )}
         </div>
 
-        {/* Footer Info */}
-        <div className="mt-16 pt-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-8 opacity-40 hover:opacity-100 transition-opacity">
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest underline decoration-cyfair-red decoration-2 underline-offset-4">
-              <MapPin className="w-4 h-4" />
-              Albuquerque, NM
+        {/* Footer: Asymmetrical Layout */}
+        <footer className="mt-40 pt-16 border-t border-white/5">
+          <div className="flex flex-col md:flex-row items-start justify-between gap-16 opacity-30 hover:opacity-100 transition-opacity duration-700">
+            <div className="space-y-6">
+              <img src={logo} alt="Cyfair Elite" className="h-12 w-auto grayscale brightness-200" />
+              <div className="space-y-1">
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-white">Cy-Fair Elite New Mexico</p>
+                <p className="text-xs font-medium uppercase tracking-widest text-slate-500">Kinetic Precision Basketball • Mission Year 2026</p>
+              </div>
             </div>
-            <a
-              href="https://www.instagram.com/cyfairelitenewmexico?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/40 hover:text-cyfair-cyan transition-all transform hover:scale-110"
-              aria-label="Follow us on Instagram"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-5 h-5"
-              >
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-              </svg>
-            </a>
+
+            <div className="grid grid-cols-2 gap-16">
+              <div className="space-y-4">
+                <p className="text-[10px] font-bold uppercase tracking-widest text-v3-cyan">Operations</p>
+                <div className="flex items-center gap-3 text-sm font-bold uppercase tracking-[0.1em]">
+                  <MapPin className="w-4 h-4 text-v3-red" />
+                  Albuquerque, NM
+                </div>
+              </div>
+              <div className="space-y-4 text-right md:text-left">
+                <p className="text-[10px] font-bold uppercase tracking-widest text-v3-red">Intelligence</p>
+                <a
+                  href="https://www.instagram.com/cyfairelitenewmexico"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-sm font-bold uppercase tracking-[0.1em] hover:text-v3-cyan transition-colors"
+                >
+                  IG Feed
+                </a>
+              </div>
+            </div>
           </div>
-          <div className="text-right">
-            <p className="text-xs font-bold uppercase tracking-widest text-white/60">
-              Cyfair Elite New Mexico Basketball © 2026
+          <div className="mt-20 text-center">
+            <p className="text-[9px] font-bold uppercase tracking-[0.4em] text-white/10 italic">
+              Cyfair Elite New Mexico Basketball © 2026 • Engineered for Speed
             </p>
           </div>
-        </div>
+        </footer>
       </main>
 
       <TournamentModal

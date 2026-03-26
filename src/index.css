@@ -1,32 +1,69 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cyfair-dark: #0B1B3D;
-  --color-cyfair-red: #EF4444;
-  --color-cyfair-cyan: #22D3EE;
-  --color-cyfair-blue: #1E3A8A; /* Standard blue preference */
+  --color-v3-blue: #09103A;
+  --color-v3-red: #ED1C24;
+  --color-v3-cyan: #22D3EE;
+  --color-v3-on-secondary: #690006;
+  --color-v3-surface: #131316;
+  --color-v3-surface-low: #1B1B1E;
+  --color-v3-surface-high: #2A2A2D;
+  --color-v3-surface-highest: #353438;
+  --color-v3-surface-lowest: #0E0E11;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
 }
 
 @layer base {
   body {
-    @apply bg-slate-950 text-slate-100 antialiased selection:bg-cyfair-cyan/30;
-    font-family: 'Inter', system-ui, sans-serif;
+    @apply bg-v3-surface text-slate-100 antialiased selection:bg-v3-red/30;
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tighter uppercase;
   }
 }
 
 @layer utilities {
-  .glass-card {
-    @apply bg-cyfair-dark/40 backdrop-blur-md border border-white/10 shadow-xl;
+  .v3-glass {
+    @apply bg-v3-surface-high/60 backdrop-blur-3xl border border-white/5;
   }
-  
+
+  .high-velocity-shadow {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Ghost borders as fallback */
+  .ghost-border {
+    @apply border border-white/5;
+  }
+
+  .text-glow-red {
+    text-shadow: 0 0 10px rgba(237, 28, 36, 0.4);
+  }
+
   .text-glow-cyan {
     text-shadow: 0 0 10px rgba(34, 211, 238, 0.4);
   }
-  
-  .gradient-border {
-    position: relative;
-    border-radius: theme('borderRadius.xl');
-    background: linear-gradient(to bottom right, theme('colors.cyfair-cyan'), theme('colors.cyfair-red'));
-    padding: 1px;
+
+  .logo-highlight {
+    background: linear-gradient(to right, theme("colors.v3-cyan"), theme("colors.v3-red"));
+    @apply blur-2xl;
+  }
+
+  .v3-card {
+    @apply bg-v3-surface-low rounded-xl transition-all duration-300;
+  }
+
+  .v3-badge {
+    @apply bg-v3-red text-white text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-sm;
   }
 }
