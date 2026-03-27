@@ -41,7 +41,7 @@ const App: React.FC = () => {
               <div className="absolute -inset-8 logo-highlight opacity-30 group-hover:opacity-50 transition-opacity" />
               <img
                 src={logo}
-                alt="Cy-Fair Elite NM Logo"
+                alt="CyFair Elite NM Logo"
                 className="w-56 md:w-80 h-auto relative drop-shadow-[0_0_30px_rgba(0,0,0,0.5)]"
               />
             </div>
@@ -153,24 +153,24 @@ const App: React.FC = () => {
 
         {/* Footer: Asymmetrical Layout */}
         <footer className="mt-40 pt-16 border-t border-white/5">
-          <div className="flex flex-col md:flex-row items-start justify-between gap-16 opacity-30 hover:opacity-100 transition-opacity duration-700">
-            <div className="space-y-6">
+          <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between gap-12 opacity-30 hover:opacity-100 transition-opacity duration-700">
+            <div className="flex items-center gap-6">
               <img src={logo} alt="Cyfair Elite" className="h-12 w-auto grayscale brightness-200" />
               <div className="space-y-1">
-                <p className="text-sm font-bold uppercase tracking-[0.2em] text-white">Cy-Fair Elite New Mexico</p>
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-white leading-none">CyFair Elite New Mexico</p>
                 <p className="text-xs font-medium uppercase tracking-widest text-slate-500">Kinetic Precision Basketball • Mission Year 2026</p>
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-16">
-              <div className="space-y-4">
+            <div className="flex items-center gap-12 md:gap-24">
+              <div className="space-y-2">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-v3-cyan">Operations</p>
                 <div className="flex items-center gap-3 text-sm font-bold uppercase tracking-[0.1em]">
                   <MapPin className="w-4 h-4 text-v3-red" />
                   Albuquerque, NM
                 </div>
               </div>
-              <div className="space-y-4 text-right md:text-left">
+              <div className="space-y-2 text-right lg:text-left">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-v3-red">Intelligence</p>
                 <a
                   href="https://www.instagram.com/cyfairelitenewmexico"
