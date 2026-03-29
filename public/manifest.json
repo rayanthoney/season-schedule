@@ -1,0 +1,15 @@
+{
+    "short_name": "Cyfair Elite",
+    "name": "Cyfair Elite New Mexico Season Schedule",
+    "icons": [
+        {
+            "src": "/seasonFavicon/android-chrome-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#b91c1c",
+    "background_color": "#000000"
+}
