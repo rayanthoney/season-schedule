@@ -51,10 +51,21 @@
   - Refactored `TournamentModal` to use a nested content component, eliminating synchronous state updates in effects (fixing `react-hooks/set-state-in-effect` linting errors).
   - Conducted logic assessment of `App.tsx` and `data.ts` to ensure 2026 schedule accuracy.
 
+- **[2026-03-28 17:35]**: **Favicon Assessment & Optimization**.
+  - Identified 1.2 MB `favicon.svg` bottleneck due to embedded high-res data.
+  - Corrected `index.html` link type mismatch (`image/png` -> `image/svg+xml`).
+  - Integrated optimized favicon suite (ICO/PNG) from `seasonFavicon/` folder (99% reduction in icon payload).
+  - Configured `manifest.json` for PWA support and mobile desktop integration.
+- **[2026-03-28 20:10]**: **Documentation & Environment Overhaul**.
+  - Generated `CONTRIBUTING.md` with full local development setup and PR checklists.
+  - Replaced boilerplate `README.md` with project-specific documentation and auto-generated script reference tables.
+  - Implemented `.env.example` architecture for secure OpenWeather API key management.
+  - Verified codebase linting and build stability.
+
 ### ✅ Recent Progress & Wins
-- **Weather Intelligence**: Integrated live-ready weather outlooks for all tour cities, enhancing the parent/fan travel experience.
-- **V3 Design Language**: Successfully implemented "The Monolith" aesthetic, creating a premium, broadcast-ready digital experience.
-- **API Stability**: Verified the OpenWeather integration with robust error handling and mock fallbacks.
+- **Web App Identity**: Fully professionalized the app icon system with a lightweight, cross-platform favicon suite.
+- **Developer Experience**: Standardized local setup and environment management via comprehensive documentation and `.env.example`.
+- **Performance Excellence**: Drastically reduced early-load payload by optimizing the favicon assets.
 
 ### 🔜 Next Steps / Backlog
 - [ ] **Phase 6: Mini-Roster Sidebar**: Integrate player context for fans and coaches.
