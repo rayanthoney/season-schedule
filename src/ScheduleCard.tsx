@@ -18,7 +18,7 @@ export const ScheduleCard: React.FC<{
                 <div className="flex-1 space-y-4">
                     <div className="flex items-center gap-4">
                         <span className={`v3-badge ${isOngoing ? 'bg-v3-cyan' : isFinal ? 'bg-white/10' : 'bg-v3-red'}`}>
-                            {isOngoing ? 'LIVE TELEMETRY' : isFinal ? 'MISSION COMPLETE' : 'UPCOMING SECTOR'}
+                            {isOngoing ? 'IN PROGRESS' : isFinal ? 'FINAL' : 'UPCOMING'}
                         </span>
                         <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30 truncate">
                             ID: CY-{tournament.id.slice(0, 8).toUpperCase()}
@@ -50,9 +50,9 @@ export const ScheduleCard: React.FC<{
 
                 <div className="flex items-center gap-10">
                     <div className="text-right hidden md:block border-r border-white/5 pr-8">
-                        <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30 mb-1 leading-none">Sector Status</p>
+                        <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30 mb-1 leading-none">Tournament Status</p>
                         <p className="text-sm font-black uppercase text-white font-display">
-                            {isOngoing ? 'SYSTEM ACTIVE' : isFinal ? 'DATA ARCHIVED' : 'STANDBY'}
+                            {isOngoing ? 'IN PROGRESS' : isFinal ? 'FINAL' : 'UPCOMING'}
                         </p>
                     </div>
 

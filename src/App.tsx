@@ -49,7 +49,7 @@ const App: React.FC = () => {
             <div className="text-center md:text-left pt-4 space-y-8 flex-1">
               <div className="inline-flex items-center gap-3 px-4 py-2 rounded-sm bg-v3-surface-low border-l-2 border-v3-red shadow-2xl">
                 <span className="w-2 h-2 rounded-full bg-v3-red animate-pulse" />
-                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-v3-red">Elite Athletic Ops</span>
+                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-v3-red">Official Season Portal</span>
               </div>
 
               <div className="space-y-4">
@@ -58,7 +58,7 @@ const App: React.FC = () => {
                   <span className="text-v3-cyan text-glow-cyan">SCHEDULE</span>
                 </h1>
                 <p className="text-lg md:text-xl text-slate-400 max-w-xl font-medium leading-relaxed font-body">
-                  High-velocity telemetry for the 2026 pursuit. Precision, performance, and the path to the championship.
+                  Your home for CyFair Elite NM 2026 season details. Keeping parents and players connected to the schedule and our mission for excellence.
                 </p>
               </div>
 
@@ -77,7 +77,7 @@ const App: React.FC = () => {
                     </svg>
                   </div>
                   <div className="text-left font-display">
-                    <p className="text-[9px] font-bold uppercase tracking-widest text-white/30 leading-none mb-1">Telemetry Feed</p>
+                    <p className="text-[9px] font-bold uppercase tracking-widest text-white/30 leading-none mb-1">Latest News</p>
                     <p className="text-base font-bold uppercase text-white group-hover/ig:text-v3-cyan transition-colors leading-none tracking-wider">@cyfairelitenm</p>
                   </div>
                 </a>
@@ -85,7 +85,7 @@ const App: React.FC = () => {
                 {/* Vertical Stat Pulse (v3 Signature) */}
                 <div className="hidden lg:flex items-center gap-10 px-10 border-l border-white/10 opacity-30">
                   <div>
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-1">Active Sector</p>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-1">Club Region</p>
                     <p className="text-sm font-bold uppercase text-white">Southwest</p>
                   </div>
                   <div>
@@ -125,7 +125,7 @@ const App: React.FC = () => {
             <Search className="absolute left-6 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20 group-focus-within:text-v3-cyan transition-colors" />
             <input
               type="text"
-              placeholder="LOCATE TOURNAMENT SECTOR..."
+              placeholder="SEARCH TOURNAMENTS..."
               className="w-full bg-v3-surface-low rounded-sm py-5 pl-16 pr-6 text-xs font-bold uppercase tracking-[0.3em] focus:outline-none focus:bg-v3-surface-high transition-all placeholder:text-white/10"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -146,7 +146,7 @@ const App: React.FC = () => {
           ) : (
             <div className="text-center py-32 bg-v3-surface-low rounded-sm border border-dashed border-white/5">
               <Calendar className="w-16 h-16 text-white/5 mx-auto mb-8" />
-              <p className="text-white/20 font-bold uppercase tracking-[0.3em] text-sm italic">No data received from Sector {activeFilter.toUpperCase()}</p>
+              <p className="text-white/20 font-bold uppercase tracking-[0.3em] text-sm italic">No tournaments found for {activeFilter.toUpperCase()}</p>
             </div>
           )}
         </div>
@@ -158,20 +158,20 @@ const App: React.FC = () => {
               <img src={logo} alt="Cyfair Elite" className="h-12 w-auto grayscale brightness-200" />
               <div className="space-y-1">
                 <p className="text-sm font-bold uppercase tracking-[0.2em] text-white leading-none">CyFair Elite New Mexico</p>
-                <p className="text-xs font-medium uppercase tracking-widest text-slate-500">Kinetic Precision Basketball • Mission Year 2026</p>
+                <p className="text-xs font-medium uppercase tracking-widest text-slate-500">CyFair Elite New Mexico Basketball • 2026 Season</p>
               </div>
             </div>
 
             <div className="flex items-center gap-12 md:gap-24">
               <div className="space-y-2">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-v3-cyan">Operations</p>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-v3-cyan">Home Base</p>
                 <div className="flex items-center gap-3 text-sm font-bold uppercase tracking-[0.1em]">
                   <MapPin className="w-4 h-4 text-v3-red" />
                   Albuquerque, NM
                 </div>
               </div>
               <div className="space-y-2 text-right lg:text-left">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-v3-red">Intelligence</p>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-v3-red">Follow Us</p>
                 <a
                   href="https://www.instagram.com/cyfairelitenewmexico"
                   target="_blank"
@@ -185,7 +185,7 @@ const App: React.FC = () => {
           </div>
           <div className="mt-20 text-center">
             <p className="text-[9px] font-bold uppercase tracking-[0.4em] text-white/10 italic">
-              Cyfair Elite New Mexico Basketball © 2026 • Engineered for Speed
+              Cyfair Elite New Mexico Basketball © 2026 • Committed to Excellence
             </p>
           </div>
         </footer>
