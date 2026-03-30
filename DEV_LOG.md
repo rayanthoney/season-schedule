@@ -61,6 +61,13 @@
   - Replaced boilerplate `README.md` with project-specific documentation and auto-generated script reference tables.
   - Implemented `.env.example` architecture for secure OpenWeather API key management.
   - Verified codebase linting and build stability.
+- **[2026-03-29 18:20]**: **UI De-futurization & Terminology Refinement**.
+  - Systematically replaced sci-fi/technical terminology with standard sports and parent-friendly language.
+  - Updated `App.tsx`: Hero text, Instagram labels, and search placeholders.
+  - Updated `ScheduleCard.tsx`: Replaced "Sector Status" with "Tournament Status" and standardized status values (In Progress, Final, Upcoming).
+  - Updated `TournamentModal.tsx`: Comprehensive re-labeling of "Tournament Details", "Event Locations", "Weather Forecast", and "Calendar Sync".
+  - Maintained the high-fidelity "v3" design system while significantly improving usability for non-technical users.
+  - Fixed minor Tailwind linting warnings (`h-[1px]` -> `h-px`).
 
 ### ✅ Recent Progress & Wins
 - **Web App Identity**: Fully professionalized the app icon system with a lightweight, cross-platform favicon suite.

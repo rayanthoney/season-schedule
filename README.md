@@ -47,4 +47,4 @@ A high-performance, visually-driven React application designed to showcase the 2
 
 - **Primary Colors**: Navy (#0B1B3D), Cyan (#22D3EE), Red (#EF4444)
 - **Typography**: Space Grotesk (Headings), Inter (Body)
-- **Aesthetics**: Glassmorphism, Modern Broadcast Design
+- **Aesthetics**: Glassmorphism, Modern Broadcast Design (Parent-Friendly Terminology)
