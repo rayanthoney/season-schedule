@@ -68,9 +68,9 @@ const TournamentModalContent: React.FC<{ tournament: Tournament, onClose: () => 
                     <div className="absolute inset-0 p-8 flex flex-col justify-end">
                         <div className="inline-flex items-center gap-3 mb-4">
                             <div className="v3-badge bg-v3-blue text-v3-cyan border border-v3-cyan/30">
-                                TOURNAMENT INTEL
+                                TOURNAMENT DETAILS
                             </div>
-                            <span className="text-[10px] font-bold uppercase tracking-[.3em] text-white/40">Sector {tournament.location.split(',')[1]?.trim().toUpperCase() || 'NM'}</span>
+                            <span className="text-[10px] font-bold uppercase tracking-[.3em] text-white/40">Region: {tournament.location.split(',')[1]?.trim().toUpperCase() || 'NM'}</span>
                         </div>
                         <h2 className="text-4xl md:text-5xl font-black italic text-white uppercase tracking-tighter font-display leading-none">
                             {tournament.name}
@@ -93,7 +93,7 @@ const TournamentModalContent: React.FC<{ tournament: Tournament, onClose: () => 
                             <div className="bg-v3-surface-lowest p-6 border-l-2 border-v3-red">
                                 <div className="flex items-center gap-4 mb-4">
                                     <Calendar className="w-4 h-4 text-v3-red" />
-                                    <p className="text-[10px] font-bold uppercase tracking-[.4em] text-white/30 leading-none">SCHEDULE WINDOW</p>
+                                    <p className="text-[10px] font-bold uppercase tracking-[.4em] text-white/30 leading-none">TOURNAMENT DATES</p>
                                 </div>
                                 <p className="text-lg font-bold text-white uppercase tracking-wider font-display">{tournament.dates}</p>
                             </div>
@@ -101,7 +101,7 @@ const TournamentModalContent: React.FC<{ tournament: Tournament, onClose: () => 
                             <div className="bg-v3-surface-lowest p-6 border-l-2 border-v3-cyan">
                                 <div className="flex items-center gap-4 mb-4">
                                     <MapPin className="w-4 h-4 text-v3-cyan" />
-                                    <p className="text-[10px] font-bold uppercase tracking-[.4em] text-white/30 leading-none">TARGET LOCATION</p>
+                                    <p className="text-[10px] font-bold uppercase tracking-[.4em] text-white/30 leading-none">EVENT LOCATION</p>
                                 </div>
                                 <p className="text-lg font-bold text-white uppercase tracking-wider font-display">{tournament.location}</p>
                             </div>
@@ -110,7 +110,7 @@ const TournamentModalContent: React.FC<{ tournament: Tournament, onClose: () => 
                                 <div className="bg-v3-surface-highest/20 p-6 italic shadow-inner">
                                     <div className="flex items-center gap-4 mb-3">
                                         <Info className="w-4 h-4 text-white/20" />
-                                        <p className="text-[10px] font-bold uppercase tracking-[.4em] text-white/20 leading-none">MISSION NOTES</p>
+                                        <p className="text-[10px] font-bold uppercase tracking-[.4em] text-white/20 leading-none">TOURNAMENT NOTES</p>
                                     </div>
                                     <p className="text-sm text-white/50 leading-relaxed">{tournament.note}</p>
                                 </div>
@@ -124,7 +124,7 @@ const TournamentModalContent: React.FC<{ tournament: Tournament, onClose: () => 
                                 <div className="space-y-2">
                                     <p className="text-[10px] font-bold uppercase tracking-[.4em] text-white/30 flex items-center gap-3">
                                         <Sun className="w-3 h-3 text-v3-red" />
-                                        ENVIRONMENTAL
+                                        WEATHER FORECAST
                                     </p>
                                     {loadingWeather ? (
                                         <div className="h-8 w-32 bg-white/5 animate-pulse rounded-sm" />
@@ -134,7 +134,7 @@ const TournamentModalContent: React.FC<{ tournament: Tournament, onClose: () => 
                                             <span className="text-xs font-bold text-v3-cyan uppercase tracking-[.2em]">{weather.condition}</span>
                                         </div>
                                     ) : (
-                                        <span className="text-xs text-white/20 italic tracking-widest uppercase">SCANNING...</span>
+                                        <span className="text-xs text-white/20 italic tracking-widest uppercase">LOADING...</span>
                                     )}
                                 </div>
                                 <div className="p-4 bg-v3-surface-lowest group-hover:bg-v3-red transition-colors shadow-inner">
@@ -144,7 +144,7 @@ const TournamentModalContent: React.FC<{ tournament: Tournament, onClose: () => 
 
                             {/* Venue Telemetry */}
                             <div className="space-y-4">
-                                <p className="text-[10px] font-bold uppercase tracking-[.4em] text-white/30 leading-none ml-1">VECTOR MAPS</p>
+                                <p className="text-[10px] font-bold uppercase tracking-[.4em] text-white/30 leading-none ml-1">VENUE LOCATIONS</p>
                                 <div className="space-y-2">
                                     {tournament.venues && tournament.venues.length > 0 ? (
                                         tournament.venues.map((venue, idx) => (
@@ -168,7 +168,7 @@ const TournamentModalContent: React.FC<{ tournament: Tournament, onClose: () => 
                                             rel="noopener noreferrer"
                                             className="flex items-center justify-between p-4 bg-v3-surface-lowest hover:bg-white/5 border border-white/5 transition-all group"
                                         >
-                                            <span className="text-xs font-bold uppercase tracking-widest text-white/70 group-hover:text-v3-cyan">LOCATE ON GRID</span>
+                                            <span className="text-xs font-bold uppercase tracking-widest text-white/70 group-hover:text-v3-cyan">VIEW ON MAP</span>
                                             <ExternalLink className="w-4 h-4 text-white/10 group-hover:text-v3-cyan transition-colors" />
                                         </a>
                                     )}
@@ -180,7 +180,7 @@ const TournamentModalContent: React.FC<{ tournament: Tournament, onClose: () => 
                     {/* Action Matrix */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-12 border-t border-white/5">
                         <div className="flex flex-col gap-2">
-                            <p className="text-[10px] font-bold uppercase tracking-[.4em] text-white/30 leading-none mb-2 ml-1">SYNC DATA</p>
+                            <p className="text-[10px] font-bold uppercase tracking-[.4em] text-white/30 leading-none mb-2 ml-1">ADD TO CALENDAR</p>
                             <div className="flex gap-2">
                                 <a
                                     href={getGoogleCalendarLink(tournament)}
@@ -200,7 +200,7 @@ const TournamentModalContent: React.FC<{ tournament: Tournament, onClose: () => 
                         </div>
 
                         <div className="flex flex-col gap-2">
-                            <p className="text-[10px] font-bold uppercase tracking-[.4em] text-white/30 leading-none mb-2 ml-1">EXECUTE ACTIONS</p>
+                            <p className="text-[10px] font-bold uppercase tracking-[.4em] text-white/30 leading-none mb-2 ml-1">QUICK LINKS</p>
                             <div className="flex gap-2">
                                 {tournament.bracketUrl ? (
                                     <a
@@ -209,11 +209,11 @@ const TournamentModalContent: React.FC<{ tournament: Tournament, onClose: () => 
                                         rel="noopener noreferrer"
                                         className="flex-1 flex items-center justify-center p-4 bg-v3-red text-white text-[10px] font-bold uppercase tracking-[.4em] shadow-[0_0_20px_rgba(237,28,36,0.2)] hover:shadow-v3-red/40 transition-all"
                                     >
-                                        BRACKET FEED
+                                        TOURNAMENT BRACKET
                                     </a>
                                 ) : (
                                     <div className="flex-1 flex items-center justify-center p-4 bg-white/5 text-[10px] font-bold uppercase tracking-[0.4em] text-white/20 italic">
-                                        LOCKED
+                                        NOT AVAILABLE
                                     </div>
                                 )}
                                 {tournament.websiteUrl && (
@@ -223,7 +223,7 @@ const TournamentModalContent: React.FC<{ tournament: Tournament, onClose: () => 
                                         rel="noopener noreferrer"
                                         className="flex-1 flex items-center justify-center p-4 bg-v3-surface-lowest hover:bg-v3-blue text-[10px] font-bold uppercase tracking-[.4em] border border-white/10 transition-all"
                                     >
-                                        SECURE SITE
+                                        OFFICIAL WEBSITE
                                     </a>
                                 )}
                             </div>

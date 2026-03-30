@@ -65,7 +65,7 @@ export const ScheduleCard: React.FC<{
             </div>
 
             {/* Kinetic Scanline */}
-            <div className="absolute bottom-0 left-0 w-full h-[1px] bg-v3-red opacity-0 group-hover:opacity-40 transition-opacity" />
+            <div className="absolute bottom-0 left-0 w-full h-px bg-v3-red opacity-0 group-hover:opacity-40 transition-opacity" />
         </div>
     );
 };
